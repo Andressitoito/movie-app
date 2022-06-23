@@ -1,0 +1,40 @@
+@import '../Styles/fonts';
+@import '../Styles/variables';
+
+article{
+  position: relative;
+  font-family: $--ff--primary ;
+  font-weight: 900;
+  display: flex;
+  width: 225px;
+  flex-shrink: 0;
+  
+  .poster-image{
+    width: 100%;
+    outline: 2px solid red;
+  }
+
+  .type{
+    position: absolute;
+    top: 16px;
+    left: 16px;
+  }
+
+  .rating{
+    position: absolute;
+    top: 16px;
+    left: 180px;
+  }
+
+  .title{
+    position: absolute;
+    top: 270px;
+    width: 100%;
+    text-align: center;
+    color: $--btn--clr--text;
+    background-color: rgba($color: black, $alpha: .7);
+    padding: $--margin--padding--1;
+    border-radius: $--margin--padding--1;
+    line-height: 20px;
+  }
+}

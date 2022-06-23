@@ -1,0 +1,36 @@
+@import '../Styles/mixins';
+@import '../Styles/fonts';
+@import '../Styles/variables';
+
+.main-container {
+  @include flexCenter;
+  background-color: grey;
+  font-family: $--ff--primary;
+  font-weight: 900;
+
+  .carrousel {
+    @include flexCenter;
+    height: 50px;
+  }
+
+  .list-container {
+    width: 100%;
+    background-color: rgb(96, 97, 96);
+    padding: $--margin--padding--4;
+
+    h4 {
+      text-transform: uppercase;
+      margin-bottom: $--margin--padding--2;
+    }
+
+    .list-items-container {
+      outline: 2px solid blue;
+      @include flexCenter($direction: row, $content: space-around);
+      gap: $--margin--padding--2;
+      overflow-x: scroll;
+      justify-content: flex-start;
+    }
+  }
+
+
+}
