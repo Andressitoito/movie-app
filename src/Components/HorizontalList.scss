@@ -1,0 +1,62 @@
+@import '../Styles/mixins';
+@import '../Styles/fonts';
+@import '../Styles/variables';
+
+
+.main-container {
+  @include flexCenter;
+  background-color: grey;
+  font-family: $--ff--primary;
+  font-weight: 900;
+
+  outline: 4px solid orange;
+}
+
+
+.list-container {
+  width: 100%;
+  outline: 4px solid orange;
+
+  background-color: rgb(96, 97, 96);
+  padding: $--margin--padding--4;
+
+  h4 {
+    text-transform: uppercase;
+    margin-bottom: $--margin--padding--2;
+  }
+
+  .list-items-container {
+    outline: 4px solid blue;
+    @include flexCenter($direction: row, $content: space-around);
+    gap: $--margin--padding--2;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    scrollbar-gutter: stable;
+  }
+
+  .list-items-container::-webkit-scrollbar {
+    // width: 50px;
+    scrollbar-width: thin;
+    height: 40px;
+  }
+
+  .list-items-container::-webkit-scrollbar-track {
+    background-color: rgb(96, 97, 96);
+    border-radius: 100px;
+  }
+
+  .list-items-container::-webkit-scrollbar-thumb {
+    background: #d4d270;
+    border: 10px solid transparent;
+    border-radius: 20px;
+    background-clip: content-box;
+  }
+
+  .list-items-container::-webkit-scrollbar-thumb:hover {
+    background-color: #5749d2;
+  }
+
+
+
+
+}

@@ -16,14 +16,24 @@ article{
 
   .type{
     position: absolute;
-    top: 16px;
+    top: $--margin--padding--1;
     left: 16px;
+    text-transform: uppercase;
+    color: $--btn--clr--text;
+    background-color: rgba($color: black, $alpha: .7);
+    padding: $--margin--padding--1;
+    letter-spacing: 1px;
+    border-radius: $--margin--padding--1;
   }
 
   .rating{
     position: absolute;
-    top: 16px;
-    left: 180px;
+    top: $--margin--padding--1;
+    left: $--margin--padding--1;
+    color: $--btn--clr--text;
+    border-radius: $--margin--padding--2;
+    background-color: rgba($color: black, $alpha: .5);
+    padding: 1px 4px 0;
   }
 
   .title{

@@ -1,9 +1,8 @@
-import HorizontalList from './HorizontalList';
-import './Main.scss';
 import ItemList from './ItemList';
+import './HorizontalList.scss';
 
 
-const Main = () => {
+const HorizontalList = ({title, type}) => {
 
  const results = [
   {
@@ -254,26 +253,37 @@ const Main = () => {
   }
  ]
 
-
-
  return (
-  <section className='main-container'>
+
+  <div className='list-container'>
+
+   <h4>
+    Popular {title}
+   </h4>
+   <div className='list-items-container'>
+
+    {
+     results.map(({ id, title, vote_average, poster_path }) => (
+      <ItemList
+       key={id}
+       id={id}
+       title={title}
+       vote_average={vote_average}
+       poster_path={poster_path}
+       type={type}
+      />
+     ))
+    }
+
+   </div>
 
 
-   <div className='carrousel'>Carrousel</div>
 
-   <HorizontalList 
-   title={'movies'}
-   type={'movie'}
-   />
-   <HorizontalList 
-   title={'series'}
-   type={'serie'}
-   />
+  </div>
 
-  
-  </section>
+
+
  )
 }
 
-export default Main;
+export default HorizontalList;
