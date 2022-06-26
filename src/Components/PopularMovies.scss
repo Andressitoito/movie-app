@@ -1,0 +1,18 @@
+@import '../Styles/mixins';
+@import '../Styles/fonts';
+@import '../Styles/variables';
+
+.popular-movies-container {
+  background-color: rgb(114, 110, 110);
+  @include flexCenter;
+
+  .carrousel-container {
+    width: 100%;
+    outline: 3px solid red;
+    overflow: hidden;
+  
+  }
+
+
+
+}
