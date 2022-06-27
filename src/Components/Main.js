@@ -1,6 +1,7 @@
 import HorizontalList from './HorizontalList';
 import './Main.scss';
 import ItemList from './ItemList';
+import Carrousel from './Carrousel';
 
 
 const Main = () => {
@@ -260,19 +261,21 @@ const Main = () => {
   <section className='main-container'>
 
 
-   <div className='carrousel'>Carrousel</div>
+   <div className='carrousel-container'>
+    <Carrousel />
+   </div>
 
-   <HorizontalList 
-   title={'movies'}
-   type={'movie'}
+   <HorizontalList
+    title={'movies'}
+    type={'movie'}
    />
-   <HorizontalList 
-   title={'series'}
-   type={'serie'}
+   <HorizontalList
+    title={'series'}
+    type={'serie'}
    />
 
-  
-  </section>
+
+  </section >
  )
 }
 

@@ -1,6 +1,7 @@
 .carrousel-main {
   outline: 4px solid blue;
   overflow: hidden;
+  height: 500px;
 
   .image-container {
     position: relative;
@@ -15,6 +16,9 @@
 
   }
 
+  
+
+
   @media (max-width: 1400px){
     height: (1400px / 3);
   }
@@ -27,7 +31,7 @@
   }
     
   @media (max-width: 400px){
-    height: (400px / 3);
+    height: (400px / 2);
   }
     
     

@@ -7,13 +7,13 @@
   background-color: grey;
   font-family: $--ff--primary;
   font-weight: 900;
-  outline: 13px solid blue;
 
-  .carrousel {
-    @include flexCenter;
-    height: 50px;
+  .carrousel-container {
+    width: 100%;
+    outline: 3px solid red;
+    overflow: hidden;
+  
   }
-
  
 
 }
