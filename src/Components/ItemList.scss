@@ -1,50 +1,56 @@
 @import '../Styles/fonts';
 @import '../Styles/variables';
 
-article{
-  position: relative;
-  font-family: $--ff--primary ;
-  font-weight: 900;
-  display: flex;
-  width: 225px;
-  flex-shrink: 0;
-  
-  .poster-image{
-    width: 100%;
-    outline: 2px solid red;
-  }
+.article-link {
 
-  .type{
-    position: absolute;
-    top: $--margin--padding--1;
-    left: 16px;
-    text-transform: uppercase;
-    color: $--btn--clr--text;
-    background-color: rgba($color: black, $alpha: .7);
-    padding: $--margin--padding--1;
-    letter-spacing: 1px;
-    border-radius: $--margin--padding--1;
-  }
+  article {
+    position: relative;
+    font-family: $--ff--primary ;
+    display: flex;
+    width: 225px;
+    flex-shrink: 0;
+    height: 420px;
 
-  .rating{
-    position: absolute;
-    top: $--margin--padding--1;
-    left: $--margin--padding--1;
-    color: $--btn--clr--text;
-    border-radius: $--margin--padding--2;
-    background-color: rgba($color: black, $alpha: .5);
-    padding: 1px 4px 0;
-  }
+    .poster-image {
+      width: 100%;
+      outline: 2px solid red;
+      height: 335px;
 
-  .title{
-    position: absolute;
-    top: 270px;
-    width: 100%;
-    text-align: center;
-    color: $--btn--clr--text;
-    background-color: rgba($color: black, $alpha: .7);
-    padding: $--margin--padding--1;
-    border-radius: $--margin--padding--1;
-    line-height: 20px;
+    }
+
+    .type {
+      position: absolute;
+      top: $--margin--padding--1;
+      left: 16px;
+      // text-transform: uppercase;
+      color: $--btn--clr--text;
+      background-color: rgba($color: black, $alpha: .7);
+      padding: $--margin--padding--1;
+      letter-spacing: 1px;
+      border-radius: $--margin--padding--1;
+    }
+
+    .rating {
+      position: absolute;
+      top: $--margin--padding--1;
+      left: $--margin--padding--1;
+      color: $--btn--clr--text;
+      border-radius: $--margin--padding--2;
+      background-color: rgba($color: black, $alpha: .5);
+      padding: 1px 4px 0;
+    }
+
+    .title {
+      position: absolute;
+      top: 340px;
+      width: 100%;
+      text-align: center;
+      color: $--btn--clr--text;
+      background-color: rgba($color: black, $alpha: .7);
+      padding: $--margin--padding--1;
+      border-radius: 4px;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
   }
 }

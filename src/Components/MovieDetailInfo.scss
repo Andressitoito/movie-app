@@ -1,0 +1,38 @@
+@import '../Styles/mixins';
+@import '../Styles/fonts';
+@import '../Styles/variables';
+
+.details-container {
+  display: flex;
+  position: relative;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgb(66, 66, 66) 50%, rgba(0, 0, 0, 1) 90%);
+  height: 550px;
+  color: $--btn--clr--text;
+  font-family: 'Libre Franklin', sans-serif;
+  width: 100%;
+
+  .details-container-image {
+    outline: 3px solid blue;
+    @include flexCenter;
+    width: 400px;
+  }
+
+  .details-container-description {
+    width: 600px;
+    @include flexCenter($content: space-between);
+    padding: $--margin--padding--4;
+    gap: $--margin--padding--4;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      font-weight: 100;
+
+    }
+  }
+}

@@ -1,5 +1,6 @@
 @import '../Styles/fonts';
 @import '../Styles/variables';
+@import '../Styles/mixins';
 
 nav {
   position: relative;
@@ -10,21 +11,14 @@ nav {
   background-size: contain;
   font-family: $--ff--primary;
   font-weight: 600;
-  
-  
-  ul{
+
+
+  ul {
     display: flex;
-    li{
-      padding: 8px 16px;
-      background-color: $--btn--clr--bg;
-      border-radius: $--margin--padding--1;
-      margin: 0 $--margin--padding--1;
+
+    .btn-custom {
+      @include btnCustom;
     }
-  }
-  .link{
-    text-decoration: none;
-    color: $--btn--clr--text;
-    letter-spacing: 3px;
   }
 
 }

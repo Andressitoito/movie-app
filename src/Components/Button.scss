@@ -1,0 +1,7 @@
+@import '../Styles/mixins';
+@import '../Styles/fonts';
+@import '../Styles/variables';
+
+.btn-custom {
+  @include btnCustom;
+}

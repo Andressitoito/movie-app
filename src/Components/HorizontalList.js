@@ -257,7 +257,7 @@ const HorizontalList = ({title, type}) => {
 
   <div className='list-container'>
 
-   <h4>
+   <h4 className='horizontal-list-title'>
     Popular {title}
    </h4>
    <div className='list-items-container'>

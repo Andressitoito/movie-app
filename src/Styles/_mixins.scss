@@ -4,3 +4,10 @@
   justify-content: $content;
   align-items: $align;
 }
+
+@mixin btnCustom {
+  background-color: $--btn--clr--bg;
+  margin: 0 $--margin--padding--1;
+  letter-spacing: 3px;
+  color: $--btn--clr--text;
+}

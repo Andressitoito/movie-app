@@ -9,6 +9,9 @@ import PopularSeries from './Components/PopularSeries';
 import NotFound404 from './Components/NotFound404';
 import MovieDetail from './Components/MovieDetail';
 import SerieDetail from './Components/SerieDetail';
+import MovieDetailInfo from './Components/MovieDetailInfo';
+import MovieDetailSimilar from './Components/MovieDetailSimilar';
+import MovieDetailCasting from './Components/MovieDetailCasting';
 
 const App = () => {
  return (
@@ -16,11 +19,16 @@ const App = () => {
    <Nav />
    <Routes>
     <Route path='/' element={<Main />} />
-    <Route path='/popularmovies' element={<PopularMovies />}/>
-    <Route path='/popularmovies/:movieid' element={<MovieDetail />}/>
-    <Route path='/popularseries' element={<PopularSeries />}/>
-    <Route path='/popularseries/:serieid' element={<SerieDetail />}/>
-    <Route path='*' element={<NotFound404 />}/>
+    <Route path='/popularmovies' element={<PopularMovies />} />
+    <Route path='/popularmovies/:movieid' element={<MovieDetail />}>
+     <Route path='moviedetailinfo' element={<MovieDetailInfo />} />
+     <Route path='moviedetailcasting' element={<MovieDetailCasting />} />
+     <Route path='moviedetailsimilar' element={<MovieDetailSimilar />} />
+    </Route>
+    
+    <Route path='/popularseries' element={<PopularSeries />} />
+    <Route path='/popularseries/:serieid' element={<SerieDetail />} />
+    <Route path='*' element={<NotFound404 />} />
    </Routes>
    <Footer />
   </BrowserRouter>
