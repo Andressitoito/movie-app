@@ -11,7 +11,8 @@ import MovieDetail from './Components/MovieDetail';
 import SerieDetail from './Components/SerieDetail';
 import MovieDetailInfo from './Components/MovieDetailInfo';
 import MovieDetailSimilar from './Components/MovieDetailSimilar';
-import MovieDetailCasting from './Components/MovieDetailCasting';
+import MovieDetailCast from './Components/MovieDetailCast';
+import CastProfile from './Components/CastProfile';
 
 const App = () => {
  return (
@@ -19,13 +20,14 @@ const App = () => {
    <Nav />
    <Routes>
     <Route path='/' element={<Main />} />
-    <Route path='/popularmovies' element={<PopularMovies />} />
-    <Route path='/popularmovies/:movieid' element={<MovieDetail />}>
+    <Route path='popularmovies' element={<PopularMovies />} />
+    <Route path='popularmovies/:movieid' element={<MovieDetail />}>
      <Route path='moviedetailinfo' element={<MovieDetailInfo />} />
-     <Route path='moviedetailcasting' element={<MovieDetailCasting />} />
+     <Route path='moviedetailcast' element={<MovieDetailCast />} />
+     <Route path='castprofile/:profileid' element={<CastProfile />} />
      <Route path='moviedetailsimilar' element={<MovieDetailSimilar />} />
     </Route>
-    
+
     <Route path='/popularseries' element={<PopularSeries />} />
     <Route path='/popularseries/:serieid' element={<SerieDetail />} />
     <Route path='*' element={<NotFound404 />} />

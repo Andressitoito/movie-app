@@ -3,20 +3,28 @@
 @import '../Styles/variables';
 
 .main-container-movie-detail {
-  position: relative;
+  // position: relative;
   @include flexCenter($direction: column);
   font-family: $--ff--primary;
 
   .movie-detail-background {
+    // position: relative;
     width: 100%;
-    height: 80vh;
-    position: relative;
+    margin-bottom: -3px;
+    // height: 85vh;
     overflow: hidden;
-
+    // object-fit: ;
+    
     img {
-      position: absolute;
+      // position: absolute;
+      // outline: 2px solid red;
       width: 100%;
-      top: -20%;
+      // height: 300px;
+      // top: -30%;
+      height: 100%;
+      transform: scale(125%);
+      // object-position: 60% 1%;
+      // transform: translateY(-12%);
     }
   }
 
@@ -25,6 +33,7 @@
     background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgb(66, 66, 66) 50%, rgba(0, 0, 0, 1) 90%);
     width: 100%;
     font-size: 1.5rem;
+    // margin-top: -3px;
 
     ul {
       @include flexCenter($direction: row);
@@ -33,7 +42,7 @@
       li {
         padding: $--margin--padding--2;
         text-transform: uppercase;
-        
+
         .detail-link {
           font-weight: 500;
           color: $--btn--clr--text;

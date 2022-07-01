@@ -7,7 +7,6 @@
   position: relative;
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgb(66, 66, 66) 50%, rgba(0, 0, 0, 1) 90%);
-  height: 550px;
   color: $--btn--clr--text;
   font-family: 'Libre Franklin', sans-serif;
   width: 100%;
@@ -20,9 +19,11 @@
 
   .details-container-description {
     width: 600px;
-    @include flexCenter($content: space-between);
+    @include flexCenter();
+    align-items: flex-start;
     padding: $--margin--padding--4;
     gap: $--margin--padding--4;
+    outline: 3px solid orange;
 
     h3 {
       text-transform: uppercase;
@@ -30,9 +31,19 @@
     }
 
     p {
+      line-height: 25px;
+    }
+
+    .rating {
+      outline: 2px solid red;
       font-size: 1rem;
       font-weight: 100;
-
     }
+
+      .details-misc {
+        outline: 2px solid red;
+        font-size: 1rem;
+        font-weight: 100;
+      }
   }
 }

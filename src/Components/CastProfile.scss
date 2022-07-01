@@ -1,0 +1,48 @@
+@import '../Styles/mixins';
+@import '../Styles/fonts';
+@import '../Styles/variables';
+
+.profile-container {
+ display: flex;
+ position: relative;
+ background: rgb(0, 0, 0);
+ background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgb(66, 66, 66) 50%, rgba(0, 0, 0, 1) 90%);
+ color: $--btn--clr--text;
+ font-family: 'Libre Franklin', sans-serif;
+ width: 100%;
+
+ .profile-container-image {
+  outline: 3px solid blue;
+  @include flexCenter;
+  width: 400px;
+ }
+
+ .profile-container-description {
+  width: 600px;
+  @include flexCenter();
+  align-items: flex-start;
+  padding: $--margin--padding--4;
+  gap: $--margin--padding--4;
+  outline: 3px solid orange;
+
+  h3 {
+   text-transform: uppercase;
+   font-size: 2rem;
+  }
+
+  p {
+   line-height: 25px;
+  }
+
+  .profile-birthday {
+   outline: 2px solid red;
+   font-weight: 100;
+  }
+
+  a {
+   text-decoration: none;
+   font-style: oblique;
+  }
+ }
+ 
+}

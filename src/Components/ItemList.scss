@@ -2,20 +2,18 @@
 @import '../Styles/variables';
 
 .article-link {
+  text-decoration: none;
 
   article {
     position: relative;
     font-family: $--ff--primary ;
-    display: flex;
     width: 225px;
     flex-shrink: 0;
-    height: 420px;
 
     .poster-image {
       width: 100%;
       outline: 2px solid red;
       height: 335px;
-
     }
 
     .type {
@@ -41,7 +39,7 @@
     }
 
     .title {
-      position: absolute;
+      // position: absolute;
       top: 340px;
       width: 100%;
       text-align: center;

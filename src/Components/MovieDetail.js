@@ -49,9 +49,8 @@ const MovieDetail = () => {
    <div className='details-links'>
     <ul>
      <li><Link to='moviedetailinfo' className='detail-link'>Movie Id: {params.movieid}</Link></li>
-     <li><Link to='moviedetailcasting' className='detail-link'>Movie Id: {params.movieid}</Link></li>
+     <li><Link to='moviedetailcast' className='detail-link'>Movie Id: {params.movieid}</Link></li>
      <li><Link to='moviedetailsimilar' className='detail-link'>Movie Id: {params.movieid}</Link></li>
-
     </ul>
    </div>
    <Outlet />
