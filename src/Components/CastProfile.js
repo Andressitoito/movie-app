@@ -40,12 +40,11 @@ const CastProfile = () => {
    </div>
    <div className='profile-container-description'>
 
-    <h3 className='profile-title'>{results[0].name}</h3>
-    <p className='profile-birthday'>{results[0].birthday} <p>{results[0].place_of_birth}</p></p>
-    <p className='profile-misc'>{results[0].biography}</p>
+    <h3>{results[0].name}</h3>
+    <p>{results[0].birthday} <p>{results[0].place_of_birth}</p></p>
+    <p>{results[0].biography}</p>
 
-    <a href={`${results[0].homepage}`}  target="_blank" >Web Site</a>
-
+    <a href={`${results[0].homepage}`} target="_blank" >Web Site</a>
 
    </div>
   </div>

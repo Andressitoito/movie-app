@@ -9,11 +9,15 @@
     font-family: $--ff--primary ;
     width: 225px;
     flex-shrink: 0;
+    
+    .detail-cast-image-container {
+      overflow: hidden;
 
-    .poster-image {
-      width: 100%;
-      outline: 2px solid red;
-      height: 335px;
+      .poster-image {
+        width: 100%;
+        outline: 2px solid red;
+        height: 335px;
+      }
     }
 
     .type {
@@ -51,4 +55,14 @@
       text-transform: uppercase;
     }
   }
+  &:hover {
+    .poster-image {
+     width: 100%;
+     outline: 12px solid red;
+     height: 335px;
+     transform: scale(105%);
+     transition: all .25s;
+ 
+    }
+   }
 }

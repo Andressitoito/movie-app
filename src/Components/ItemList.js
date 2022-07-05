@@ -2,15 +2,16 @@ import './ItemList.scss';
 import Rating from '@mui/material/Rating';
 import { Link } from 'react-router-dom';
 
-const ItemList = ({ id, title, vote_average, poster_path, type }) => {
+const ItemList = ({ id, title, vote_average, poster_path }) => {
 
  const newRating = vote_average / 2
 
  return (
   <Link to={`/popularmovies/${id}/moviedetailinfo`} className='article-link'>
    <article>
-    <img src={`https://image.tmdb.org/t/p/w185/${poster_path}`} alt={title} className='poster-image' />
-    {/* <span className='type'>{type}</span> */}
+    <div className='detail-cast-image-container'>
+     <img src={`https://image.tmdb.org/t/p/w185/${poster_path}`} alt={title} className='poster-image' />
+    </div>
 
     <span className='rating'> <Rating name="half-rating-read" value={newRating} precision={0.25} readOnly /></span>
     <h4 className='title'>{title}</h4>

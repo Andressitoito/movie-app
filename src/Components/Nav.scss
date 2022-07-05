@@ -3,22 +3,39 @@
 @import '../Styles/mixins';
 
 nav {
-  position: relative;
-  padding: $--margin--padding--2;
-  background-image: url('../images/pngegg.png');
-  background-color: rgba($color: #000000, $alpha: .7);
-  background-repeat: repeat-x;
-  background-size: contain;
-  font-family: $--ff--primary;
-  font-weight: 600;
+ @include flexCenter($direction: row, $content: flex-start);
+ position: relative;
+ padding: $--margin--padding--2;
+ background-image: url('../images/pngegg.png');
+ background-color: rgba($color: #000000, $alpha: .7);
+ background-repeat: repeat-x;
+ background-size: contain;
+ font-family: $--ff--primary;
+ font-weight: 600;
 
+ .input-search-wrap {
+  @include flexCenter($direction: row, $content: flex-start);
+  background-color: $--btn--clr--bg;
+  border-radius: 4px;
+  margin: 0 $--margin--padding--1;
 
-  ul {
-    display: flex;
-
-    .btn-custom {
-      @include btnCustom;
-    }
+  .input-search {
+   letter-spacing: 2px;
+   color: $--btn--clr--text;
+   font-family: $--ff--primary;
   }
+  
+  .input-icon{
+   color: $--btn--clr--text;
+  }
+ }
+
+ ul {
+  @include flexCenter($direction: row, $content: flex-start);
+
+  .btn-custom {
+   @include btnCustom;
+  }
+ }
 
 }

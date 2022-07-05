@@ -2,23 +2,20 @@
 @import '../Styles/fonts';
 @import '../Styles/variables';
 
-.main-container {
-  @include flexCenter;
-  background-color: grey;
-  font-family: $--ff--primary;
-}
-
 .list-container {
+  @include mainBackground;
   width: 100%;
   outline: 4px solid orange;
-
-  background-color: rgb(96, 97, 96);
   padding: $--margin--padding--4;
+  font-family: $--ff--primary;
 
   .horizontal-list-title {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: $--margin--padding--2;
     font-weight: 700;
+    color: $--btn--clr--text;
   }
 
   .list-items-container {
@@ -37,7 +34,7 @@
   }
 
   .list-items-container::-webkit-scrollbar-track {
-    background-color: rgb(96, 97, 96);
+    background-color: transparent;
     border-radius: 100px;
   }
 

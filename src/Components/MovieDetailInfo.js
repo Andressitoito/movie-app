@@ -1,4 +1,5 @@
-import './MovieDetailInfo.scss'
+import './MovieDetailInfo.scss';
+import Rating from '@mui/material/Rating';
 
 const MovieDetailInfo = () => {
 
@@ -93,12 +94,13 @@ const MovieDetailInfo = () => {
    <div className='details-container-description'>
 
     <h3 className='details-title'>{results[0].original_title}</h3>
-    <p className='details-rating'>{results[0].vote_average}</p>
+
+    <p className='details-rating'> <Rating name="half-rating-read" max={10} value={results[0].vote_average} precision={0.25} readOnly /></p>
     <p className='details-misc'>{results[0].overview}</p>
     <p className='details-misc'>Duration: <span>
-     {results[0].runtime}</span></p>
-    <p className='details-misc'>Budget: {results[0].budget}</p>
-    <p className='details-misc'>Revenue: {results[0].revenue}</p>
+     {results[0].runtime} min</span></p>
+    <p className='details-misc'>Budget: ${results[0].budget}</p>
+    <p className='details-misc'>Revenue: ${results[0].revenue}</p>
     <p className='details-misc'>Genres:
      {
       movie_genres.map(genre => (

@@ -1,0 +1,7 @@
+@import './Styles/mixins';
+@import './Styles/fonts';
+@import './Styles/variables';
+
+.main-app{
+ font-family: $--ff--primary;
+}

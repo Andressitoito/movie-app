@@ -4,7 +4,7 @@
 
 .main-container {
   @include flexCenter;
-  background-color: grey;
+  @include mainBackground;
   font-family: $--ff--primary;
 
   .carrousel-container {

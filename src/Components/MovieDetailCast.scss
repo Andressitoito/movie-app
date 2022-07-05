@@ -4,51 +4,31 @@
 
 .detail-cast {
  @include flexCenter($direction: row, $align: flex-start);
+ @include detailBackground;
  flex-wrap: wrap;
  gap: $--margin--padding--2;
  padding: $--margin--padding--1;
- background: rgb(0, 0, 0);
- background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgb(66, 66, 66) 50%, rgba(0, 0, 0, 1) 90%);
- color: $--btn--clr--text;
- font-family: $--ff--primary;
- width: 100%;
+
 
 
  article {
   font-family: $--ff--primary ;
   width: 225px;
   flex-shrink: 0;
+  
+  .detail-cast-image-container {
+   overflow: hidden;
 
-  .poster-image {
-   width: 100%;
-   outline: 2px solid red;
-   height: 335px;
+   .poster-image {
+    width: 100%;
+    outline: 2px solid red;
+    height: 335px;
+   }
 
   }
 
-  .type {
-   position: absolute;
-   top: $--margin--padding--1;
-   left: 16px;
-   // text-transform: uppercase;
-   color: $--btn--clr--text;
-   background-color: rgba($color: black, $alpha: .7);
-   padding: $--margin--padding--1;
-   letter-spacing: 1px;
-   border-radius: $--margin--padding--1;
-  }
-
-  .rating {
-   position: absolute;
-   top: $--margin--padding--1;
-   left: $--margin--padding--1;
-   color: $--btn--clr--text;
-   border-radius: $--margin--padding--2;
-   background-color: rgba($color: black, $alpha: .5);
-   padding: 1px 4px 0;
-  }
-
-  .title, .title-name {
+  .title,
+  .title-name {
    width: 100%;
    text-align: center;
    color: $--btn--clr--text;
@@ -60,8 +40,19 @@
   }
 
   .title-name {
-  text-transform: none;
-  background-color: rgba($color: rgb(94, 94, 94), $alpha: .5);
+   text-transform: none;
+   background-color: rgba($color: rgb(94, 94, 94), $alpha: .5);
+  }
+
+  &:hover {
+   .poster-image {
+    width: 100%;
+    outline: 12px solid red;
+    height: 335px;
+    transform: scale(105%);
+    transition: all .25s;
+
+   }
   }
  }
 

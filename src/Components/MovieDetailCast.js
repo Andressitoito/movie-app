@@ -158,7 +158,9 @@ console.log(params)
     cast.cast.map(actor => (
      <Link to={`/popularmovies/${params.movieid}/castprofile/${actor.id}`} className='Link'>
       <article>
+       <div className='detail-cast-image-container'>
        <img src={`https://image.tmdb.org/t/p/w185/${actor.profile_path}`} alt={actor.character} className='poster-image' />
+       </div>
        <p className='title'>{actor.character}</p>
        <p className='title-name'>{actor.name}</p>
       </article>

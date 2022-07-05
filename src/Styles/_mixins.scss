@@ -15,3 +15,16 @@
 .Link{
   text-decoration: none;
 }
+
+@mixin mainBackground {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 10%, rgb(66, 66, 66) 50%, rgba(0, 0, 0, 1) 90%);
+}
+
+@mixin detailBackground {
+  @include mainBackground;
+  color: $--btn--clr--text;
+  font-family: $--ff--primary;
+  width: 100%;
+}
+

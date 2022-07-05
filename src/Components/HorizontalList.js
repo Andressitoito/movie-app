@@ -2,7 +2,7 @@ import ItemList from './ItemList';
 import './HorizontalList.scss';
 
 
-const HorizontalList = ({title, type}) => {
+const HorizontalList = ({list_title}) => {
 
  const results = [
   {
@@ -258,7 +258,7 @@ const HorizontalList = ({title, type}) => {
   <div className='list-container'>
 
    <h4 className='horizontal-list-title'>
-    Popular {title}
+    {list_title}
    </h4>
    <div className='list-items-container'>
 
@@ -270,7 +270,6 @@ const HorizontalList = ({title, type}) => {
        title={title}
        vote_average={vote_average}
        poster_path={poster_path}
-       type={type}
       />
      ))
     }

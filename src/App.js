@@ -13,10 +13,11 @@ import MovieDetailInfo from './Components/MovieDetailInfo';
 import MovieDetailSimilar from './Components/MovieDetailSimilar';
 import MovieDetailCast from './Components/MovieDetailCast';
 import CastProfile from './Components/CastProfile';
+import SearchResults from './Components/SearchResults';
 
 const App = () => {
  return (
-  <BrowserRouter>
+  <BrowserRouter className='main-app'>
    <Nav />
    <Routes>
     <Route path='/' element={<Main />} />
@@ -27,6 +28,7 @@ const App = () => {
      <Route path='castprofile/:profileid' element={<CastProfile />} />
      <Route path='moviedetailsimilar' element={<MovieDetailSimilar />} />
     </Route>
+    <Route path='search/:searchresults' element={<SearchResults />} />
 
     <Route path='/popularseries' element={<PopularSeries />} />
     <Route path='/popularseries/:serieid' element={<SerieDetail />} />
