@@ -14,6 +14,10 @@ import MovieDetailSimilar from './Components/MovieDetailSimilar';
 import MovieDetailCast from './Components/MovieDetailCast';
 import CastProfile from './Components/CastProfile';
 import SearchResults from './Components/SearchResults';
+import ShowResults from './Components/ShowResults';
+import SerieDetailInfo from './Components/SerieDetailInfo';
+import SerieDetailCast from './Components/SerieDetailCast';
+import SerieDetailSimilar from './Components/SerieDetailSimilar';
 
 const App = () => {
  return (
@@ -29,9 +33,14 @@ const App = () => {
      <Route path='moviedetailsimilar' element={<MovieDetailSimilar />} />
     </Route>
     <Route path='search/:searchresults' element={<SearchResults />} />
-
-    <Route path='/popularseries' element={<PopularSeries />} />
-    <Route path='/popularseries/:serieid' element={<SerieDetail />} />
+    <Route path='showresults/:listname' element={<ShowResults />} />
+    <Route path='popularseries' element={<PopularSeries />} />
+    <Route path='popularseries/:serieid' element={<SerieDetail />} />
+    <Route path='seriedetailinfo' element={<SerieDetailInfo />} />
+    <Route path='seriedetailcast' element={<SerieDetailCast />} />
+    <Route path='castprofile/:profileid' element={<CastProfile />} />
+    <Route path='seriedetailsimilar' element={<SerieDetailSimilar />} />
+    <Route />
     <Route path='*' element={<NotFound404 />} />
    </Routes>
    <Footer />

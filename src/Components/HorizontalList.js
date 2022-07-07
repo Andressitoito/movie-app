@@ -1,8 +1,13 @@
 import ItemList from './ItemList';
 import './HorizontalList.scss';
+import useFetchList from '../Hooks/useFetchList';
+import { Link } from 'react-router-dom';
 
+const HorizontalList = ({ list_title, category, type }) => {
 
-const HorizontalList = ({list_title}) => {
+ console.log(category)
+
+ const resultados = useFetchList('movie', 'popular')
 
  const results = [
   {
@@ -254,22 +259,30 @@ const HorizontalList = ({list_title}) => {
  ]
 
  return (
-
   <div className='list-container'>
-
-   <h4 className='horizontal-list-title'>
-    {list_title}
-   </h4>
+   <Link to={`/showresults/${category}`}
+    state={{
+     type: type,
+     category: category,
+     list_title: list_title
+    }}
+    className='article-link'
+   >
+    <h4 className='horizontal-list-title'>
+     {list_title}
+    </h4>
+   </Link>
    <div className='list-items-container'>
 
     {
-     results.map(({ id, title, vote_average, poster_path }) => (
+     results.map(({ id, title, name, vote_average, poster_path }) => (
       <ItemList
        key={id}
        id={id}
-       title={title}
+       title={type === 'movie' ? title : name}
        vote_average={vote_average}
        poster_path={poster_path}
+       type={type}
       />
      ))
     }

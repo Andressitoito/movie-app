@@ -1,0 +1,13 @@
+@import '../Styles/mixins';
+@import '../Styles/fonts';
+@import '../Styles/variables';
+
+.search-results {
+ @include flexCenter($direction: row, $align: flex-start);
+ @include detailBackground;
+ flex-wrap: wrap;
+ gap: $--margin--padding--2;
+ padding: $--margin--padding--1;
+
+
+}

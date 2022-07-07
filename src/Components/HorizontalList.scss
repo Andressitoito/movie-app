@@ -5,7 +5,7 @@
 .list-container {
   @include mainBackground;
   width: 100%;
-  outline: 4px solid orange;
+  // outline: 4px solid orange;
   padding: $--margin--padding--4;
   font-family: $--ff--primary;
 
@@ -28,8 +28,8 @@
   }
 
   .list-items-container::-webkit-scrollbar {
-    // width: 50px;
     scrollbar-width: thin;
+    scrollbar-width: 40px;
     height: 40px;
   }
 

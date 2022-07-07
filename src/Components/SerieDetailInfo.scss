@@ -1,0 +1,50 @@
+@import '../Styles/mixins';
+@import '../Styles/fonts';
+@import '../Styles/variables';
+
+.details-container {
+  @include detailBackground;
+  display: flex;
+  position: relative;
+
+
+  .details-container-image {
+    outline: 3px solid blue;
+    @include flexCenter;
+    width: 400px;
+  }
+
+  .details-container-description {
+    width: 600px;
+    @include flexCenter();
+    align-items: flex-start;
+    padding: $--margin--padding--4;
+    gap: $--margin--padding--4;
+    outline: 3px solid orange;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+
+    p {
+      line-height: 25px;
+    }
+
+    .details-rating {
+      // outline: 2px solid red;
+      font-size: 1rem;
+      font-weight: 100;
+      background-color: rgba($color: rgb(94, 94, 94), $alpha: .4);
+      color: white;
+      padding: 5px 7px 0;
+      border-radius: 15px;
+    }
+
+    .details-misc {
+      outline: 2px solid red;
+      font-size: 1rem;
+      font-weight: 100;
+    }
+  }
+}

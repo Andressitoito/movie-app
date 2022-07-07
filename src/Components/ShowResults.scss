@@ -1,0 +1,26 @@
+@import '../Styles/mixins';
+@import '../Styles/fonts';
+@import '../Styles/variables';
+
+.show-results-main {
+ @include detailBackground;
+ padding: $--margin--padding--1;
+ text-align: center;
+ min-height: 90vh;
+
+ .horizontal-list-title {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: $--margin--padding--2;
+  font-weight: 700;
+  color: $--btn--clr--text;
+ }
+
+ .show-results {
+  @include flexCenter($direction: row, $align: flex-start);
+  flex-wrap: wrap;
+  gap: $--margin--padding--2;
+  padding: $--margin--padding--1;
+ }
+}

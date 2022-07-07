@@ -2,12 +2,16 @@ import './ItemList.scss';
 import Rating from '@mui/material/Rating';
 import { Link } from 'react-router-dom';
 
-const ItemList = ({ id, title, vote_average, poster_path }) => {
+const ItemList = ({ id, title, vote_average, poster_path, type }) => {
 
  const newRating = vote_average / 2
 
  return (
-  <Link to={`/popularmovies/${id}/moviedetailinfo`} className='article-link'>
+  <Link to={
+   type === 'movie'
+    ? `/popularmovies/${id}/moviedetailinfo`
+    : `/popularseries/${id}/seriedetailinfo`
+  } className='article-link'>
    <article>
     <div className='detail-cast-image-container'>
      <img src={`https://image.tmdb.org/t/p/w185/${poster_path}`} alt={title} className='poster-image' />

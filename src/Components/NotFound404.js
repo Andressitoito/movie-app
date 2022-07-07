@@ -2,7 +2,7 @@ import './NotFound404.scss'
 
 const NotFound404 = () => {
   return (
-    <div>
+    <div className='not-found'>
       404 NOT FOUND
     </div>
   )
