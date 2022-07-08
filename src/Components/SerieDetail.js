@@ -231,14 +231,6 @@ const SerieDetail = () => {
   <div className='main-container-serie-detail'>
    <div
     className='serie-detail-background'
-   // style={{
-   //  backgroundImage: `url(${`https://image.tmdb.org/t/p/w1280/${results[0].backdrop_path}`})`,
-   //  // backgroundImage: `url(${externalImage})`,
-   //  backgroundSize: 'cover',
-   //  backgroundRepeat: 'no-repeat',
-   //  backgroundPosition: '40% 50%',
-   //  height: '80vh'
-   // }}
    >
     <img src={`https://image.tmdb.org/t/p/w1280/${results.backdrop_path}`} />
 
@@ -246,9 +238,9 @@ const SerieDetail = () => {
 
    <div className='details-links'>
     <ul>
-     <li><Link to='seriedetailinfo' className='detail-link'>Movie Id: {params.serieid}</Link></li>
-     <li><Link to='seriedetailcast' className='detail-link'>Movie Id: {params.serieid}</Link></li>
-     <li><Link to='seriedetailsimilar' className='detail-link'>Movie Id: {params.serieid}</Link></li>
+     <li><Link to='seriedetailinfo' className='detail-link'>Info</Link></li>
+     <li><Link to='seriedetailcast' className='detail-link'>Cast</Link></li>
+     <li><Link to='seriedetailsimilar' className='detail-link'>Similar</Link></li>
     </ul>
    </div>
    <Outlet />

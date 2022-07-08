@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
-import { urlBase, apiKey, q_page } from "../Utils/variables";
+import { urlBase, apiKey, q_page, q_search } from "../Utils/variables";
 
-
-const useFetchList = (type, category, page) => {
+const useFetchSearch = (searchReq, page) => {
 
  const [results, setResults] = useState([])
  const [isLoading, setIsLoading] = useState(false)
@@ -10,7 +9,7 @@ const useFetchList = (type, category, page) => {
 
  useEffect(() => {
   setIsLoading(true)
-  fetch(`${urlBase}${type}/${category}?${apiKey}${q_page}${page}`)
+  fetch(`${urlBase}search/multi/?${apiKey}${q_search}${searchReq}${q_page}${page}`)
    .then((res) => res.json())
    .then((data) => {
     console.log(data)
@@ -20,8 +19,7 @@ const useFetchList = (type, category, page) => {
    })
  }, [page])
 
-
  return [results, isLoading, totalPages]
 }
 
-export default useFetchList;
+export default useFetchSearch;

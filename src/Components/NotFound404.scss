@@ -3,12 +3,16 @@
 @import '../Styles/variables';
 
 .not-found {
- @include flexCenter($direction: row, $align: flex-start);
+ @include flexCenter($direction: column, $align: center);
  @include detailBackground;
  flex-wrap: wrap;
  gap: $--margin--padding--2;
  padding: $--margin--padding--1;
  height: 90vh;
 
+ img{
+  outline: 3px solid blue;
+  width: 225px;
+ }
 
 }

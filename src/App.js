@@ -32,15 +32,15 @@ const App = () => {
      <Route path='castprofile/:profileid' element={<CastProfile />} />
      <Route path='moviedetailsimilar' element={<MovieDetailSimilar />} />
     </Route>
-    <Route path='search/:searchresults' element={<SearchResults />} />
+    <Route path='searchresults/:searchresults' element={<SearchResults />} />
     <Route path='showresults/:listname' element={<ShowResults />} />
     <Route path='popularseries' element={<PopularSeries />} />
-    <Route path='popularseries/:serieid' element={<SerieDetail />} />
-    <Route path='seriedetailinfo' element={<SerieDetailInfo />} />
-    <Route path='seriedetailcast' element={<SerieDetailCast />} />
-    <Route path='castprofile/:profileid' element={<CastProfile />} />
-    <Route path='seriedetailsimilar' element={<SerieDetailSimilar />} />
-    <Route />
+    <Route path='popularseries/:serieid' element={<SerieDetail />} >
+     <Route path='seriedetailinfo' element={<SerieDetailInfo />} />
+     <Route path='seriedetailcast' element={<SerieDetailCast />} />
+     <Route path='castprofile/:profileid' element={<CastProfile />} />
+     <Route path='seriedetailsimilar' element={<SerieDetailSimilar />} />
+    </Route>
     <Route path='*' element={<NotFound404 />} />
    </Routes>
    <Footer />

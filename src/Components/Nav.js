@@ -18,7 +18,7 @@ const Nav = () => {
 
  const handleSubmit = (e) => {
   e.preventDefault()
-  navigate(`/search/${inputValue}`)
+  navigate(`/searchresults/${inputValue}`)
  }
 
  return (

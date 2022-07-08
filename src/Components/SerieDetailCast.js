@@ -1,7 +1,7 @@
 import './SerieDetailCast.scss';
 import { Link, useParams } from 'react-router-dom';
 
-const SerieDetailCast = ({movie_id}) => {
+const SerieDetailCast = () => {
 
 const params = useParams()
 console.log(params)
@@ -156,7 +156,7 @@ console.log(params)
 
    {
     cast.cast.map(actor => (
-     <Link to={`/popularmovies/${params.movieid}/castprofile/${actor.id}`} className='Link'>
+     <Link to={`/popularmovies/${params.serieid}/castprofile/${actor.id}`} className='Link'>
       <article>
        <div className='detail-cast-image-container'>
        <img src={`https://image.tmdb.org/t/p/w185/${actor.profile_path}`} alt={actor.character} className='poster-image' />

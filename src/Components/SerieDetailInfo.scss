@@ -2,19 +2,20 @@
 @import '../Styles/fonts';
 @import '../Styles/variables';
 
-.details-container {
+.serie-details-container {
   @include detailBackground;
   display: flex;
   position: relative;
+  font-weight: 100;
 
 
-  .details-container-image {
+  .serie-details-container-image {
     outline: 3px solid blue;
     @include flexCenter;
     width: 400px;
   }
 
-  .details-container-description {
+  .serie-details-container-description {
     width: 600px;
     @include flexCenter();
     align-items: flex-start;
@@ -24,6 +25,7 @@
 
     h3 {
       text-transform: uppercase;
+      font-weight: 600;
       font-size: 1.5rem;
     }
 
@@ -31,7 +33,7 @@
       line-height: 25px;
     }
 
-    .details-rating {
+    .serie-details-rating {
       // outline: 2px solid red;
       font-size: 1rem;
       font-weight: 100;
@@ -41,10 +43,9 @@
       border-radius: 15px;
     }
 
-    .details-misc {
-      outline: 2px solid red;
+    .serie-details-misc {
       font-size: 1rem;
-      font-weight: 100;
+      font-weight: 300;
     }
   }
 }

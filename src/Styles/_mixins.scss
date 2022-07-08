@@ -1,3 +1,6 @@
+@import '../Styles/fonts';
+@import '../Styles/variables';
+
 @mixin flexCenter($direction: column, $content: center, $align: center) {
   display: flex;
   flex-direction: $direction;
@@ -28,3 +31,14 @@
   width: 100%;
 }
 
+.pagination-wrapper {
+  @include flexCenter($direction: column, $align: center);
+ 
+  .pagination {
+   padding: 4px;
+   border-radius: $--margin--padding--4;
+   background-image: none;
+   background-color: rgba($color: rgb(250, 248, 248), $alpha: .4);
+  }
+ 
+ }

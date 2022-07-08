@@ -1,7 +1,7 @@
 import './MovieDetailCast.scss';
 import { Link, useParams } from 'react-router-dom';
 
-const MovieDetailCast = ({movie_id}) => {
+const MovieDetailCast = () => {
 
 const params = useParams()
 console.log(params)

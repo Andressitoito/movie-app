@@ -2,12 +2,25 @@
 @import '../Styles/fonts';
 @import '../Styles/variables';
 
-.search-results {
- @include flexCenter($direction: row, $align: flex-start);
+.search-results-main {
  @include detailBackground;
- flex-wrap: wrap;
- gap: $--margin--padding--2;
  padding: $--margin--padding--1;
+ text-align: center;
+ min-height: 90vh;
 
+ .horizontal-list-title {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: $--margin--padding--1 0 $--margin--padding--2;
+  font-weight: 700;
+  color: $--btn--clr--text;
+ }
 
+ .search-results {
+  @include flexCenter($direction: row, $align: flex-start);
+  flex-wrap: wrap;
+  gap: $--margin--padding--2;
+  padding: $--margin--padding--1;
+ }
 }
