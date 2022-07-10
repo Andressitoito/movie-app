@@ -8,7 +8,6 @@ const HorizontalList = ({ list_title, category, type }) => {
 
  const [results, isLoading] = useFetchList(type, category, 1)
 
-
  return (
   <div className='list-container'>
    <Link to={`/showresults/${category}`}

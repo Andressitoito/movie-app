@@ -2,7 +2,6 @@ import HorizontalList from './HorizontalList';
 import Carrousel from './Carrousel';
 import './Main.scss';
 
-
 const Main = () => {
 
  return (

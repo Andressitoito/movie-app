@@ -54,6 +54,7 @@ const MovieDetailSimilar = () => {
           title={title}
           vote_average={vote_average}
           poster_path={poster_path}
+          type={'movie'}
          />
         ))
        }
