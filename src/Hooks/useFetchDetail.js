@@ -13,7 +13,7 @@ const useFetchDetail = (type, id) => {
     setResults(data)
     setIsLoading(true)
    })
- }, [])
+ }, [id])
 
  return [results, isLoading]
 
