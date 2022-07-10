@@ -1,10 +1,11 @@
-import './Footer.scss'
+import './Footer.scss';
+import LoyaltyIcon from '@mui/icons-material/Loyalty';
 
 const Footer = () => {
   return (
     <footer>
       <ul>
-        <li>Hecho con culo</li>
+        <li>Made with <LoyaltyIcon/></li>
       </ul>
     </footer>
   )

@@ -5,12 +5,8 @@ import './Main.scss';
 
 const Main = () => {
 
-
-
-
  return (
   <section className='main-container'>
-
 
    <div className='carrousel-container'>
     <Carrousel />
@@ -24,9 +20,8 @@ const Main = () => {
    <HorizontalList
     list_title={'popular series'}
     category={'popular'}
-    type={'tv'} 
-    />
-
+    type={'tv'}
+   />
 
   </section >
  )

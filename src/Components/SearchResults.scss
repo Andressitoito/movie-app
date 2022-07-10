@@ -17,6 +17,9 @@
   color: $--btn--clr--text;
  }
 
+ .loader{
+  margin: $--margin--padding--1;
+ }
  .search-results {
   @include flexCenter($direction: row, $align: flex-start);
   flex-wrap: wrap;

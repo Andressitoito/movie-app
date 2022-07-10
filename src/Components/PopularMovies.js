@@ -3,7 +3,7 @@ import './PopularMovies.scss';
 
 const PopularMovies = () => {
 
- const results = [
+/*  const results = [
   {
    "adult": false,
    "backdrop_path": "/wcKFYIiVDvRURrzglV9kGu7fpfY.jpg",
@@ -251,24 +251,25 @@ const PopularMovies = () => {
    "vote_count": 335
   }
  ]
-
+ */
+ 
  return (
   <div className='popular-movies-container'>
    <HorizontalList
     list_title={'popular movies'}
-    fetch_keyword={'popular'}
+    category={'popular'}
     type={'movie'}
    />
    <HorizontalList
     list_title={'upcoming movies'}
-    fetch_keyword={'upcoming'}
+    category={'upcoming'}
     type={'movie'}
    />
-   <HorizontalList
-    list_title={'latest movies'}
-    fetch_keyword={'latest'}
+   {<HorizontalList
+    list_title={'top rated movies'}
+    category={'top_rated'}
     type={'movie'}
-   />
+   />}
 
   </div>
  )

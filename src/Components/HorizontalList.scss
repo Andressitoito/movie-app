@@ -19,7 +19,6 @@
   }
 
   .list-items-container {
-    outline: 4px solid blue;
     @include flexCenter($direction: row, $content: flex-start);
     align-items: flex-start;
     gap: $--margin--padding--2;

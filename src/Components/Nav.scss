@@ -24,8 +24,8 @@ nav {
    color: $--btn--clr--text;
    font-family: $--ff--primary;
   }
-  
-  .input-icon{
+
+  .input-icon {
    color: $--btn--clr--text;
   }
  }
@@ -38,4 +38,61 @@ nav {
   }
  }
 
+ @media (max-width: 750px) {
+  .link-icon {
+   display: none;
+  }
+ }
+
+ @media (max-width: 650px) {
+  .link-icon {
+   display: block;
+  }
+
+  .link-name {
+   display: none;
+  }
+
+  .input-search-wrap {
+
+   .input-search {
+    width: 65%;
+   }
+
+   .input-icon {
+    width: 40px;
+    margin-right: 0px;
+   }
+
+  }
+ }
+
+ @media (max-width: 400px) {
+  .input-search-wrap {
+
+   .input-search {
+    width: 65%;
+   }
+
+   .input-icon {
+    width: 35px;
+   }
+
+  }
+
+ }
+
+ @media (max-width: 386px) {
+  .input-search-wrap {
+   .input-search {
+    width: 60%;
+   }
+
+   .input-icon {
+    width: 40px;
+   }
+
+  }
+
+ }
 }

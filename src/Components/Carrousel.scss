@@ -16,7 +16,6 @@
       position: absolute;
       top: 50px;
       left: 500px;
-      outline: 4px solid blue;
       width: 400px;
       height: 150px;
 
@@ -32,12 +31,15 @@
     .ItemList-positioning {
       position: absolute;
       left: 15%;
-      top: 10%;
+      top: 12%;
       transform: scale(100%);
+
+      h4 {
+        display: none
+      }
     }
 
   }
-
 
 
 
@@ -47,14 +49,44 @@
 
   @media (max-width: 1000px) {
     height: (1000px / 3);
+
+    .carrousel-item-container {
+
+      .ItemList-positioning {
+        position: absolute;
+        left: 8%;
+        top: 0%;
+        transform: scale(80%);
+      }
+    }
   }
 
   @media (max-width:700px) {
     height: (700px / 3);
+
+    .carrousel-item-container {
+
+      .ItemList-positioning {
+        position: absolute;
+        left: 3%;
+        top: -10%;
+        transform: scale(60%);
+      }
+    }
   }
 
   @media (max-width: 400px) {
     height: (400px / 2);
+
+    .carrousel-item-container {
+
+      .ItemList-positioning {
+        position: absolute;
+        left: -5%;
+        top: -15%;
+        transform: scale(40%);
+      }
+    }
   }
 
 

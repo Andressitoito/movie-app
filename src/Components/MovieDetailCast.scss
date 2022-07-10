@@ -8,9 +8,8 @@
  flex-wrap: wrap;
  gap: $--margin--padding--2;
  padding: $--margin--padding--1;
-
-
-
+ min-height: 50vh;
+ 
  article {
   font-family: $--ff--primary ;
   width: 225px;
@@ -21,7 +20,6 @@
 
    .poster-image {
     width: 100%;
-    outline: 2px solid red;
     height: 335px;
    }
 
@@ -47,15 +45,10 @@
   &:hover {
    .poster-image {
     width: 100%;
-    outline: 12px solid red;
     height: 335px;
     transform: scale(105%);
     transition: all .25s;
-
    }
   }
  }
-
-
-
 }

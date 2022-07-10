@@ -6,17 +6,17 @@ const PopularSeries = () => {
   <div className='popular-series-container'>
    <HorizontalList
     list_title={'TV shows on air today'}
-    fetch_keyword={'airing_today'}
+    category={'airing_today'}
     type={'tv'}
    />
    <HorizontalList
     list_title={'popular tv shows'}
-    fetch_keyword={'popular'}
+    category={'popular'}
     type={'tv'}
    />
    <HorizontalList
     list_title={'top rated tv shows'}
-    fetch_keyword={'top_rated'}
+    category={'top_rated'}
     type={'tv'}
    />
   </div>

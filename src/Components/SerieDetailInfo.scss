@@ -3,49 +3,78 @@
 @import '../Styles/variables';
 
 .serie-details-container {
-  @include detailBackground;
-  display: flex;
-  position: relative;
-  font-weight: 100;
+ @include detailBackground;
+ display: flex;
+ position: relative;
+ font-weight: 100;
+ min-height: 60vh;
+
+ .serie-details-container-image {
+  @include flexCenter;
+  width: 400px;
+ }
+
+ .serie-details-container-description {
+  width: 600px;
+  @include flexCenter();
+  align-items: flex-start;
+  padding: $--margin--padding--4;
+  gap: $--margin--padding--4;
+
+  h3 {
+   text-transform: uppercase;
+   font-weight: 600;
+   font-size: 1.5rem;
+  }
+
+  p {
+   line-height: 25px;
+  }
+
+  .serie-details-rating {
+   font-size: 1rem;
+   font-weight: 100;
+   background-color: rgba($color: rgb(94, 94, 94), $alpha: .4);
+   color: white;
+   padding: 5px 7px 0;
+   border-radius: 15px;
+  }
+
+  .serie-details-misc {
+   font-size: 1rem;
+   font-weight: 400;
+  }
+ }
 
 
-  .serie-details-container-image {
-    outline: 3px solid blue;
-    @include flexCenter;
-    width: 400px;
+ @media (max-width:800px) {
+  .details-container-image {
+   img {
+    transform: scale(80%);
+   }
+  }
+ }
+
+ @media (max-width: 650px) {
+  @include flexCenter($direction: column);
+
+  .serie-container-image {
+   width: 100%;
+   padding: 0;
+   margin: 0;
+
+   img {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+   }
   }
 
   .serie-details-container-description {
-    width: 600px;
-    @include flexCenter();
-    align-items: flex-start;
-    padding: $--margin--padding--4;
-    gap: $--margin--padding--4;
-    outline: 3px solid orange;
-
-    h3 {
-      text-transform: uppercase;
-      font-weight: 600;
-      font-size: 1.5rem;
-    }
-
-    p {
-      line-height: 25px;
-    }
-
-    .serie-details-rating {
-      // outline: 2px solid red;
-      font-size: 1rem;
-      font-weight: 100;
-      background-color: rgba($color: rgb(94, 94, 94), $alpha: .4);
-      color: white;
-      padding: 5px 7px 0;
-      border-radius: 15px;
-    }
-
-    .serie-details-misc {
-      font-size: 1rem;
-      font-weight: 300;
-    }
+   width: 100%;
+   gap: $--margin--padding--2;
   }
+ }
+
+
 }

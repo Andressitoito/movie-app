@@ -12,12 +12,11 @@ const useFetchSearch = (searchReq, page) => {
   fetch(`${urlBase}search/multi/?${apiKey}${q_search}${searchReq}${q_page}${page}`)
    .then((res) => res.json())
    .then((data) => {
-    console.log(data)
     setResults(data.results)
     setIsLoading(false)
     setTotalPages(data.total_pages)
    })
- }, [page])
+ }, [page, searchReq])
 
  return [results, isLoading, totalPages]
 }

@@ -1,12 +1,15 @@
 import './MovieDetail.scss';
 import { Outlet, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import useFetchDetail from '../Hooks/useFetchDetail';
 
 const MovieDetail = () => {
 
  let params = useParams()
 
- const results = [
+ const [results] = useFetchDetail('movie', params.movieid)
+
+ const resultes = [
   {
    "adult": false,
    "backdrop_path": "/wcKFYIiVDvRURrzglV9kGu7fpfY.jpg",
@@ -42,15 +45,15 @@ const MovieDetail = () => {
    //  height: '80vh'
    // }}
    >
-    <img src={`https://image.tmdb.org/t/p/w1280/${results[0].backdrop_path}`} />
+    <img src={`https://image.tmdb.org/t/p/w1280/${results.backdrop_path}`} />
 
    </div>
 
    <div className='details-links'>
     <ul>
-     <li><Link to='moviedetailinfo' className='detail-link'>Movie Id: {params.movieid}</Link></li>
-     <li><Link to='moviedetailcast' className='detail-link'>Movie Id: {params.movieid}</Link></li>
-     <li><Link to='moviedetailsimilar' className='detail-link'>Movie Id: {params.movieid}</Link></li>
+     <li><Link to='moviedetailinfo' className='detail-link'>Info</Link></li>
+     <li><Link to='moviedetailcast' className='detail-link'>Cast</Link></li>
+     <li><Link to='moviedetailsimilar' className='detail-link'>Similar</Link></li>
     </ul>
    </div>
    <Outlet />

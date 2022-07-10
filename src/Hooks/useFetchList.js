@@ -13,7 +13,6 @@ const useFetchList = (type, category, page) => {
   fetch(`${urlBase}${type}/${category}?${apiKey}${q_page}${page}`)
    .then((res) => res.json())
    .then((data) => {
-    console.log(data)
     setResults(data.results)
     setIsLoading(false)
     setTotalPages(data.total_pages)

@@ -4,6 +4,9 @@ import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
+import HomeIcon from '@mui/icons-material/Home';
+import MovieIcon from '@mui/icons-material/Movie';
+import TvIcon from '@mui/icons-material/Tv';
 
 const Nav = () => {
 
@@ -24,9 +27,18 @@ const Nav = () => {
  return (
   <nav >
    <ul>
-    <li><Link to='/' className='btn btn-custom'>Home</Link></li>
-    <li><Link to='/popularmovies' className='btn btn-custom'>Movies</Link></li>
-    <li><Link to='/popularseries' className='btn btn-custom'>Series</Link></li>
+    <li><Link to='/' className='btn btn-custom'>
+     <span className='link-icon'><HomeIcon/></span>
+     <span className='link-name'> Home</span>
+     </Link></li>
+    <li><Link to='/popularmovies' className='btn btn-custom'>
+    <span className='link-icon'><MovieIcon/></span>
+    <span className='link-name'> Movies</span>
+     </Link></li>
+    <li><Link to='/popularseries' className='btn btn-custom'>
+    <span className='link-icon'><TvIcon/></span>
+    <span className='link-name'> Series</span>
+     </Link></li>
     <li className='input-search-wrap'>
      <form>
       <InputBase
@@ -35,7 +47,7 @@ const Nav = () => {
         flex: 1,
        }}
        className='input-search'
-       placeholder="Search Movies"
+       placeholder="movie, tv, actor"
        inputProps={{ 'aria-label': 'search movies' }}
        onChange={handleChangeInputSearch}
        value={inputValue}
@@ -45,6 +57,7 @@ const Nav = () => {
        sx={{
         p: '7px',
         borderRadius: '4px',
+        mr: '0'
        }}
        onClick={handleSubmit}
        className='input-icon'

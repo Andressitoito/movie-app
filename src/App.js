@@ -29,9 +29,9 @@ const App = () => {
     <Route path='popularmovies/:movieid' element={<MovieDetail />}>
      <Route path='moviedetailinfo' element={<MovieDetailInfo />} />
      <Route path='moviedetailcast' element={<MovieDetailCast />} />
-     <Route path='castprofile/:profileid' element={<CastProfile />} />
      <Route path='moviedetailsimilar' element={<MovieDetailSimilar />} />
     </Route>
+    <Route path='castprofile/:profileid' element={<CastProfile />} />
     <Route path='searchresults/:searchresults' element={<SearchResults />} />
     <Route path='showresults/:listname' element={<ShowResults />} />
     <Route path='popularseries' element={<PopularSeries />} />

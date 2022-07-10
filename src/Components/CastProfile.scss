@@ -10,9 +10,9 @@
  color: $--btn--clr--text;
  font-family: 'Libre Franklin', sans-serif;
  width: 100%;
+ min-height: 80vh;
 
  .profile-container-image {
-  outline: 3px solid blue;
   @include flexCenter;
   width: 400px;
  }
@@ -22,23 +22,48 @@
   @include flexCenter();
   align-items: flex-start;
   padding: $--margin--padding--4;
-  gap: $--margin--padding--4;
-  outline: 3px solid orange;
+  gap: $--margin--padding--2;
   font-weight: 100;
+
+  .profile-birthday{
+   font-weight: 400;
+  }
 
   h3 {
    text-transform: uppercase;
    font-size: 2rem;
+   font-weight: 600;
   }
 
   p {
    line-height: 25px;
-   outline: 2px solid red;
+   font-weight: 200;
   }
 
   a {
    text-decoration: none;
    font-style: oblique;
+  }
+ }
+
+ @media (max-width: 650px) {
+  @include flexCenter($direction: column);
+
+  .profile-container-image {
+   width: 100%;
+   padding: 0;
+   margin: 0;
+
+   img {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+   }
+  }
+
+  .profile-container-description {
+   width: 100%;
+   gap: $--margin--padding--2;
   }
  }
 
