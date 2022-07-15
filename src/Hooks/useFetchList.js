@@ -19,6 +19,7 @@ const useFetchList = (type, category, page) => {
    })
  }, [page])
 
+ console.log(`${urlBase}${type}/${category}?${apiKey}${q_page}${page}`)
 
  return [results, isLoading, totalPages]
 }

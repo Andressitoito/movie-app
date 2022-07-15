@@ -6,12 +6,14 @@ import useFetchList from '../Hooks/useFetchList';
 const Carrousel = () => {
 
 const [results, isLoading, totalPages] = useFetchList('movie', 'now_playing', 1)
+console.log(results)
 
  return (
   <Carousel fade interval={5000} className='carrousel-main'>
 
    {
     results.map(({ id, title, vote_average, poster_path, backdrop_path }) => (
+    
 
      <Carousel.Item 
      key={id}

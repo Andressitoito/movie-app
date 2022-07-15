@@ -18,6 +18,7 @@ const ShowResults = () => {
   setPage(value);
  };
 
+
  return (
   <div className='show-results-main'>
    <h4 className='horizontal-list-title'>
@@ -62,6 +63,7 @@ const ShowResults = () => {
    </div>
   </div>
  )
-}
+
+};
 
 export default ShowResults;
